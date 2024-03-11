@@ -11,58 +11,38 @@
     background: #63BDF7;
     overflow: hidden;
   }
-  
-  $w: 30.6rem;
-  $h: 54rem;
-  $headerH: 6rem;
-  $cardW: 24rem;
-  $cardH: 32rem;
-  $cardTopH: 20.5rem;
-  $cardBtmH: $cardH - $cardTopH;
-  $imgSize: 10rem;
-  
-  $purple: #7132B9;
-  $blue: #248CB6;
-  $indigo: #303F9F;
-  $cyan: #26C6DA;
-  $lime: #AFB42B;
-  $brown: #795548;
-  
-  $orange: #FF945A;
-  $green: #B1DA96;
-  
   .demo {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: $w;
-    height: $h;
-    margin-left: $w/-2;
-    margin-top: $h/-2;
+    width: 30.6rem;
+    height: 54rem;
+    margin-left: 30.6rem/-2;
+    margin-top: 54rem/-2;
     background: #F6F6F5;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
     
-    &__header {
-      height: $headerH;
+    .demo__header {
+      height: 6rem;
       background: #002942;
     }
     
-    &__content {
+    .demo__content {
       overflow: hidden;
       position: relative;
-      height: $h - $headerH;
+      height: 54rem - 6rem;
       padding-top: 4.5rem;
       user-select: none;
     }
     
-    &__card-cont {
+    .demo__card-cont {
       position: relative;
-      width: $cardW;
-      height: $cardH;
+      width: 24rem;
+      height: 32rem;
       margin: 0 auto 5rem;
     }
     
-    &__card {
+    .demo__card {
       z-index: 2;
       position: absolute;
       left: 0;
@@ -71,7 +51,7 @@
       height: 100%;
       transform-origin: 50% 100%;
       
-      &.reset {
+      .demo__card.reset {
         transition: transform 0.3s;
         transform: translateX(0) !important;
         
@@ -81,50 +61,50 @@
         }
       }
       
-      &.inactive {
+      .demo__card.inactive {
         transition: transform 0.3s;
       }
       
-      &.to-left {
+      .demo__card.to-left {
         transform: translateX(-30rem) rotate(-30deg) !important;
       }
       
-      &.to-right {
+      .demo__card.to-right {
         transform: translate(30rem) rotate(30deg) !important;
       }
       
-      &.below {
+      .demo__card.below {
         z-index: 1;
       }
       
-      &__top {
-        height: $cardTopH;
+      .demo__card__top {
+        height: 20.5rem;
         padding-top: 4rem;
         
-        &.purple {
-          background: $purple;
+        .demo__card__top.purple {
+          background: purple;
         }
-        &.blue {
-          background: $blue;
+        .demo__card__top.blue {
+          background: blue;
         }
-        &.indigo {
-          background: $indigo;
+        .demo__card__top.indigo {
+          background: indigo;
         }
-        &.cyan {
-          background: $cyan;
+        .demo__card__top.cyan {
+          background: cyan;
         }
-        &.lime {
-          background: $lime;
+        .demo__card__top.lime {
+          background: lime;
         }
-        &.brown {
-          background: $brown;
+        .demo__card__top.brown {
+          background: brown;
         }
       }
       
-      &__img {
+      .demo__card__img {
         overflow: hidden;
-        width: $imgSize;
-        height: $imgSize;
+        width: 10rem;
+        height: 10rem;
         margin: 0 auto 1.5rem;
         border-radius: 50%;
         border: 0.5rem solid #ffffff;
@@ -132,25 +112,25 @@
         background-size: cover;
       }
       
-      &__name {
+      .demo__card__name {
         text-align: center;
         font-size: 2rem;
         font-weight: bold;
         color: #fff;
       }
       
-      &__btm {
-        height: $cardBtmH;
+      .demo__card__btm {
+        height: 11.5rem;
         background: #FFFFFF;
       }
       
-      &__we {
+      .demo__card__we {
         text-align: center;
         font-size: 2.2rem;
-        line-height: $cardBtmH;
+        line-height: 11.5rem;
       }
       
-      &__choice {
+      .demo__card__choice {
         position: absolute;
         left: 0;
         top: 0;
@@ -158,7 +138,7 @@
         height: 100%;
         opacity: 0;
         
-        &:before {
+        .demo__card__choice:before {
           content: "";
           position: absolute;
           left: 50%;
@@ -171,7 +151,7 @@
           box-shadow: -2rem -3rem #fff, 2rem -3rem #fff;
         }
         
-        &:after {
+        .demo__card__choice:after {
           content: "";
           position: absolute;
           left: 50%;
@@ -185,19 +165,19 @@
           border-top-right-radius: 1.5rem;
         }
         
-        &.m--reject {
-          background: $orange;
+        .demo__card__choice.m--reject {
+          background: orange;
         }
-        &.m--like {
-          background: $green;
+        .demo__card__choice.m--like {
+          background: green;
           
-          &:after {
+          .demo__card__choice.m--like :after {
             transform: scaleY(-1);
           }
         }
       }
       
-      &__drag {
+      .demo__card__drag {
         z-index: 5;
         position: absolute;
         left: 0;
@@ -208,7 +188,7 @@
       }
     }
     
-    &__tip {
+    .demo__tip {
       text-align: center;
       font-size: 2.2rem;
     }
