@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    font-family: Arial;
+    padding: 10px;
+}
+/*header*/
+.header {
+    padding: 30px;
+    text-align: left;
+    background-color: hotpink;
+}
+#sitelogo {
+    height: 10vh;
+}
+.titleBar {
+    text-align: left;
+    font-size: xx-large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: black;
+}
+/* Main Site */
+.cardholder {
+    position: relative;
+    overflow: hidden;
+    height: 70vh;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+    .cardholder {
+        width: 95%;
+        height: 90vh;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+}
+/* Cards */
+.card {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.cardImageBox {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 80%;
+}
+.cardImage {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+.cardTextBox {
+    color: white;
+    width: 100%;
+    height: 20%;
+}
+/* set initial z-index */
+#card1 {
+    z-index: 1;
+}
+
+#card2 {
+    z-index: 2;
+}
+  
+/* Footer */
+.footer {
+    padding: 1px;
+    text-align: center;
+    font-size: xx-small;
+    background: hotpink;
+}
