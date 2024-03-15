@@ -1,16 +1,18 @@
 body {
     background-color: black;
     font-family: Arial;
-    padding: 10px;
+    padding: 0;
+    margin: 0;
 }
 /*header*/
 .header {
-    padding: 30px;
     text-align: left;
     background-color: hotpink;
+    height: 5dvh;
 }
 #sitelogo {
-    height: 10vh;
+    height: 4dvh;
+    padding-top: 3px;
 }
 .titleBar {
     text-align: left;
@@ -19,22 +21,39 @@ body {
     font-weight: bolder;
     color: black;
 }
+.menu {
+    height: 2dvh;
+}
+.leftColumn {   
+    float: left;
+    width: 5dvh;
+    height: 100%;
+  }
+  
+/* Right column */
+.rightColumn {
+    float: left;
+    width: 95%;
+    height: 100%;
+    line-height: 3rem;
+    height: 3rem;
+}
 /* Main Site */
 .cardholder {
     position: relative;
     overflow: hidden;
-    height: 70vh;
-    width: 30%;
+    height: 50dvh;
+    width: 30dhv;
     margin-left: 35%;
     margin-right: 35%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 20dvh;
+    margin-bottom: 20dvh;
 }
 /* Responsive layout - when the screen is less than 1000px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 1000px) {
     .cardholder {
         width: 95%;
-        height: 90vh;
+        height: 50dvh;
         margin-left: 2.5%;
         margin-right: 2.5%;
     }
@@ -76,8 +95,8 @@ body {
   
 /* Footer */
 .footer {
-    padding: 1px;
     text-align: center;
     font-size: xx-small;
     background: hotpink;
+    height: 2dvh;
 }
