@@ -8,6 +8,7 @@ function pageFirstLoad() {
     setProductCard1();
     setProductCard2();
     document.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("touchstart", onMouseDown);
 }
 async function getProduct() {
     // Default options are marked with *
@@ -32,7 +33,7 @@ function onMouseDown(e) {
     startX = e.pageX;
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
-    document.addEventListener("touchstart", onMouseDown);
+    document.addEventListener("touchmove", onMouseMove);
     document.addEventListener("touchend", onMouseUp);
     return true;
 }

@@ -73,11 +73,12 @@ body {
     margin-right: 0;
     width: 100%;
     height: 80%;
+    background-image: "/images/SquareLogo.png";
 }
 .cardImage {
     margin-left: 5%;
     margin-right: 5%;
-    width: 90%;
+    /*width: 90%;*/
 }
 .cardTextBox {
     color: white;
