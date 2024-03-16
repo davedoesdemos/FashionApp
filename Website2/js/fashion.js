@@ -1,5 +1,6 @@
 var moving = false;
 var startX = 0;
+var topcard = 1;
 
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
@@ -31,6 +32,8 @@ function onMouseDown(e) {
     startX = e.pageX;
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
+    document.addEventListener("touchstart", onMouseDown);
+    document.addEventListener("touchend", onMouseUp);
     return true;
 }
 
