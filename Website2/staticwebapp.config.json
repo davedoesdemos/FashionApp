@@ -1,7 +1,25 @@
-{
+  {
+    "routes": [
+      {
+        "route": "/*",
+        "allowedRoles": ["authenticated"]
+      }
+    ],
+    "responseOverrides": {
+      "401": {
+        "statusCode": 302,
+        "redirect": "/.auth/login/aadb2c"
+      }
+    },
     "auth": {
       "identityProviders": {
         "customOpenIdConnectProviders": {
+          "google": {
+            "registration": {
+              "clientIdSettingName": "GOOGLE_CLIENT_ID",
+              "clientSecretSettingName": "GOOGLE_CLIENT_SECRET"
+            }
+          },
           "aadb2c": {
             "registration": {
               "clientIdSettingName": "AADB2C_PROVIDER_CLIENT_ID",
@@ -13,7 +31,7 @@
               }
             },
             "login": {
-              "nameClaimType": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+              "nameClaimType": "emails",
               "scopes": [],
               "loginParameterNames": []
             }
