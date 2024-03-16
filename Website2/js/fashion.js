@@ -49,8 +49,8 @@ function onMouseMove(e) {
 
 function makeChange(deltaX) {
     moving = true;
-    deg = deltaX / 10;
-    opacity = 1-(Math.abs(deltaX) / 100);
+    deg = deltaX / 15;
+    opacity = 1-(Math.abs(deltaX/3) / 100);
     document.getElementById("card1").style.rotate = deg + "deg";
     document.getElementById("card1").style.opacity = opacity;
     document.getElementById("card1").style.transform = "translateX(" + deltaX + "px)";
