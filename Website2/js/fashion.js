@@ -1,6 +1,7 @@
 var moving = false;
 var startX = 0;
 var topcard = 1;
+var activeCard = "card1";
 
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
@@ -41,9 +42,7 @@ function onMouseDown(e) {
 function onMouseMove(e) {
     deltaX = e.pageX - startX;
     if (!deltaX) return;
-    if (Math.abs(deltaX) > 100) {
-        //reset everything and flip the cards
-    };
+
     makeChange(deltaX);
 }
 
@@ -51,15 +50,41 @@ function makeChange(deltaX) {
     moving = true;
     deg = deltaX / 15;
     opacity = 1-(Math.abs(deltaX/3) / 100);
-    document.getElementById("card1").style.rotate = deg + "deg";
-    document.getElementById("card1").style.opacity = opacity;
-    document.getElementById("card1").style.transform = "translateX(" + deltaX + "px)";
+   // document.getElementById("title").innerHTML = deltaX; //debug
+    document.getElementById(activeCard).style.rotate = deg + "deg";
+    document.getElementById(activeCard).style.opacity = opacity;
+    document.getElementById(activeCard).style.transform = "translateX(" + deltaX + "px)";
+    if (deltaX > 0) {
+        //like
+        document.getElementById(activeCard).style.backgroundColor = "green";
+    } else if (deltaX < 0) {
+        //dislike
+        document.getElementById(activeCard).style.backgroundColor = "red";
+    };
 }
 
 function onMouseUp(e) {
     moving=false;
     document.removeEventListener("mousemove", onMouseMove);
-    document.getElementById("card1").style.rotate = 0 + "deg";
-    document.getElementById("card1").style.opacity = 1;
-    document.getElementById("card1").style.transform = "translateX(" + 0 + "px)";
+    document.getElementById(activeCard).style.rotate = 0 + "deg";
+    document.getElementById(activeCard).style.opacity = 1;
+    document.getElementById(activeCard).style.transform = "translateX(" + 0 + "px)";
+    document.getElementById(activeCard).style.backgroundColor = "black";
+    if (Math.abs(deltaX) > 100) {
+        //reset everything and flip the cards
+        if (topcard == 1) {
+            document.getElementById("card1").style.zIndex = 1;
+            setProductCard1();
+            document.getElementById("card2").style.zIndex = 2;
+            topcard = 2;
+            activeCard = "card2";
+        } else {
+            document.getElementById("card1").style.zIndex = 2;
+            setProductCard2();
+            document.getElementById("card2").style.zIndex = 1;
+            topcard = 1;
+            activeCard = "card1";
+        }
+        
+    };
 }
