@@ -30,6 +30,7 @@ async function setProductCard2() {
     document.getElementById("card2Text").innerHTML = newProduct.Description;
 }
 function onMouseDown(e) {
+    deltaX = 0;
     if (moving) return;
     startX = e.pageX;
     document.addEventListener("mousemove", onMouseMove);
@@ -85,6 +86,5 @@ function onMouseUp(e) {
             topcard = 1;
             activeCard = "card1";
         }
-        
     };
 }
