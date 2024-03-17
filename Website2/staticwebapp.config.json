@@ -21,7 +21,7 @@
                 "clientSecretSettingName": "AADB2C_PROVIDER_CLIENT_SECRET"
               },
               "openIdConnectConfiguration": {
-                "wellKnownOpenIdConfiguration": "https://fashionshopapp.b2clogin.com/fashionshopapp.onmicrosoft.com/B2C_1_Microsoftsignupin/v2.0/.well-known/openid-configuration"
+                "wellKnownOpenIdConfiguration": "https://fashionshopapp.b2clogin.com/fashionshopapp.onmicrosoft.com/B2C_1_susi/v2.0/.well-known/openid-configuration"
               }
             },
             "login": {
