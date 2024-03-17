@@ -23,6 +23,10 @@
               "openIdConnectConfiguration": {
                 "wellKnownOpenIdConfiguration": "https://fashionshopapp.b2clogin.com/fashionshopapp.onmicrosoft.com/B2C_1_susi/v2.0/.well-known/openid-configuration"
               }
+            },
+            "login": {
+              "nameClaimType": "Email Addresses",
+              "scopes": ["openid"]
             }
           }
         }
