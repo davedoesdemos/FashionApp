@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 async function pageFirstLoad() {
     setProductCard1();
     setProductCard2();
+    getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"/swipe.html?productID=" + card1ProductID + "\">Chat about it</a>";
     document.addEventListener("mousedown", onMouseDown);
     document.addEventListener("touchstart", onMouseDown);
     userInfo = await getUserInfo();
@@ -36,7 +37,7 @@ async function getProduct() {
 async function setProductCard1() {
     const newProduct = await getProduct();
     document.getElementById("card1ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image1\" src=\"" + newProduct.imageLocation + "\" />";
-    document.getElementById("card1Text").innerHTML = newProduct.Description + "<br />Swipe right to like, left to dislike<br />Or <a href=\"/swipe.html?productID=" + newProduct.productID + "\">Chat about it</a>";
+    document.getElementById("card1Text").innerHTML = newProduct.Description;
     card1ProductID = newProduct.productID;
 }
 
@@ -99,12 +100,14 @@ function onMouseUp(e) {
             document.getElementById("card1").style.zIndex = 1;
             sendProductScore(card1ProductID, userID, like);
             setProductCard1();
+            getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"/swipe.html?productID=" + card2ProductID + "\">Chat about it</a>";
             document.getElementById("card2").style.zIndex = 2;
             activeCard = "card2";
         } else {
             document.getElementById("card1").style.zIndex = 2;
             sendProductScore(card2ProductID, userID, like);
             setProductCard2();
+            getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"/swipe.html?productID=" + card1ProductID + "\">Chat about it</a>";
             document.getElementById("card2").style.zIndex = 1;
             activeCard = "card1";
         }
