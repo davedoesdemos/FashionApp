@@ -2,6 +2,10 @@
 var moving = false; //prevents mousedown while moving
 var startX = 0; //The start position of the cursor or touch to measure distance moved
 var activeCard = "card1"; //The currently active card which is on top with Z-index 2
+var card1ProductID = 0; //the product currently in card 1
+var card2ProductID = 0; //the product currently in card 2
+var userID = 0; //the logged in user ID
+var like = false; //the users current preference
 
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
@@ -14,6 +18,7 @@ async function pageFirstLoad() {
     userInfo = await getUserInfo();
     if (userInfo.clientPrincipal != null) {
         document.getElementById("loginbox").innerHTML = userInfo.clientPrincipal.userDetails + " <a href=\"/.auth/logout\">(Logout)</a>";
+        userID = userInfo.clientPrincipal.userId;
     } else {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
@@ -32,6 +37,7 @@ async function setProductCard1() {
     const newProduct = await getProduct();
     document.getElementById("card1ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image1\" src=\"" + newProduct.imageLocation + "\" />";
     document.getElementById("card1Text").innerHTML = newProduct.Description;
+    card1ProductID = newProduct.productID;
 }
 
 //set product card 2 with a new product
@@ -39,6 +45,7 @@ async function setProductCard2() {
     const newProduct = await getProduct();
     document.getElementById("card2ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image2\"  src=\"" + newProduct.imageLocation + "\" />";
     document.getElementById("card2Text").innerHTML = newProduct.Description;
+    card2ProductID = newProduct.productID;
 }
 
 //Mouse and touch events
@@ -71,8 +78,10 @@ function onMouseMove(e) {
     //change the background color of the card based on the direction of the swipe
     if (deltaX > 0) {
         document.getElementById(activeCard).style.backgroundColor = "lightgreen"; //light green for like
+        like = true;
     } else if (deltaX < 0) {
         document.getElementById(activeCard).style.backgroundColor = "lightcoral"; //light red for dislike
+        like = false;
     };
 }
 
@@ -88,14 +97,21 @@ function onMouseUp(e) {
         //reset everything and flip the cards
         if (activeCard == "card1") {
             document.getElementById("card1").style.zIndex = 1;
+            sendProductScore(card1ProductID, userID, like);
             setProductCard1();
             document.getElementById("card2").style.zIndex = 2;
             activeCard = "card2";
         } else {
             document.getElementById("card1").style.zIndex = 2;
+            sendProductScore(card2ProductID, userID, like);
             setProductCard2();
             document.getElementById("card2").style.zIndex = 1;
             activeCard = "card1";
         }
     };
+}
+
+function sendProductScore (productID, userID, like) {
+    //send the results to the API
+    debugline = 0000;
 }
