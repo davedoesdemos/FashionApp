@@ -3,7 +3,7 @@
 .cardholder {
     position: relative;
     overflow: hidden;
-    height: 50dvh;
+    height: 53dvh;
     width: 30dhv;
     margin-left: 35%;
     margin-right: 35%;
@@ -14,7 +14,7 @@
 @media screen and (max-width: 1000px) {
     .cardholder {
         width: 95%;
-        height: 87dvh;
+        height: 89dvh;
         margin-left: 2.5%;
         margin-right: 2.5%;
         margin-top: 2dvh;
@@ -51,7 +51,6 @@
 #card1 {
     z-index: 2;
 }
-
 #card2 {
     z-index: 1;
 }
