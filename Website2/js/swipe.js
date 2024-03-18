@@ -113,5 +113,16 @@ function onMouseUp(e) {
 
 function sendProductScore (productID, userID, like) {
     //send the results to the API
-    debugline = 0000;
+    fetch("https://prod2-03.swedencentral.logic.azure.com:443/workflows/556a8e27080747adbc530335f6e8f5f7/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=vDku-SiKY-G_2JspjyRNoroqluDKpXFtSJYWYUS8XPY", {
+        method: "POST",
+        body: JSON.stringify({
+          "productID": productID,
+          "score": like,
+          "userID": userID
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8"
+        }
+      });
+      
 }
