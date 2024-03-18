@@ -1,0 +1,54 @@
+:root {
+    --main-bg-color: black;
+    --main-accent-color: hotpink;
+}
+/* Body */
+body {
+    background-color: var(--main-bg-color);
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    background-color: var(--main-accent-color);
+    height: 5dvh;
+    display: flex;
+}
+.leftColumn {
+    width: 5dvw;
+    height: 100%;
+    align-items: center;
+}
+.middleColumn {
+    width: 65dvw;
+    height: 100%;
+    align-items: center;
+}
+.rightColumn {
+    width: 30dvw;
+    height: 100%;
+    text-align: right;
+}
+
+/* Header Content */
+#sitelogo {
+    max-height: 4dvh;
+    max-width: 80%;
+}
+.titleBar {
+    text-align: left;
+    font-size: xx-large;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: var(--main-bg-color);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: xx-small;
+    background: var(--main-accent-color);
+    height: 2dvh;
+}

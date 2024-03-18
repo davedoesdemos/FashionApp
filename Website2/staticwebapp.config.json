@@ -3,6 +3,10 @@
       {
         "route": "/logintest.html",
         "allowedRoles": ["authenticated"]
+      },
+      {
+        "route": "/swipe.html",
+        "allowedRoles": ["authenticated"]
       }
     ],
     "responseOverrides": {

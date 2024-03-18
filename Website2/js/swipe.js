@@ -6,11 +6,17 @@ var activeCard = "card1"; //The currently active card which is on top with Z-ind
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
-function pageFirstLoad() {
+async function pageFirstLoad() {
     setProductCard1();
     setProductCard2();
     document.addEventListener("mousedown", onMouseDown);
     document.addEventListener("touchstart", onMouseDown);
+    userInfo = await getUserInfo();
+    if (userInfo.clientPrincipal != null) {
+        document.getElementById("rightColumn").innerHTML = userInfo.clientPrincipal.userDetails + " <a href=\"/.auth/logout\">(Logout)</a>";
+    } else {
+        document.getElementById("rightColumn").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
+    }
 }
 
 //Get a new random product from the catalogue API

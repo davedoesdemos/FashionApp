@@ -3,48 +3,38 @@
     <head>
         <title>Fashion App</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" type="text/css" href="css/fashion.css" />
-        <script src="js/fashion.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="js/site.js"></script>
+        <script src="js/index.js"></script> 
     </head>
     <body>
         <div class="header">
             <div class="leftColumn">
                 <a href="index.html"><img id="sitelogo" src="images/SquareLogo.png" /></a>
             </div>
-            <div class="rightColumn">
+            <div class="middleColumn">
                 <span class="titleBar" id="title">Fashion App</span>
             </div>
+            <div class="rightColumn">
+                David Lusty (logout)
+            </div>
         </div>
-        <div class="menu">
-            <a href="index.html">Swiper</a> | 
-            <a href="chat.html">Chat</a>
-        </div>
-        <div class="cardholder">
-            <div class="card" id="card1">
-                <div class="cardImageBox" id="card1ImageBox">
-                    <img class="cardImage"  src="images/SquareLogo.png" />
-                </div>
-                <div class="cardTextBox" id="card1Text">
-                    Description
-                </div>
-            </div>
-            <div class="card" id="card2">
-                <div class="cardImageBox" id="card2ImageBox">
-                    <img class="cardImage" src="images/SquareLogo.png" />
-                </div>
-                <div class="cardTextBox" id="card2Text">
-                    Description
-                </div>
-            </div>
-            <div class="card" id="card3">
-&nbsp;
-            </div>
+        <div class="grid">
+            <table class="tableGrid">
+                <tr>
+                    <td class="tableCell"><img class="gridImage" src="images/IconCatalog.png" /><br />Catalogue</td>
+                    <td class="tableCell"><a class="gridLink" href="swipe.html"><img class="gridImage" src="images/IconSwipe.png" /><br />Swipe</a></td>
+                </tr>
+                <tr>
+                    <td class="tableCell"><img class="gridImage" src="images/IconChat.png" /><br />Chat</td>
+                    <td class="tableCell"></td>
+                </tr>
+
+            </table>
         </div>
         <div class="footer">
             <h2>&copy; Dave Lusty</h2>
         </div>
-        <div id="dave"></div>
     </body>
-    
-    <script src="js/fashion.js"></script> 
 </html>
