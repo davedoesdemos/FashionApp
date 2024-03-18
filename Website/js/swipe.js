@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 async function pageFirstLoad() {
     setProductCard1();
     setProductCard2();
-    document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card1ProductID + "\">Chat about the garment</a>";
     document.addEventListener("mousedown", onMouseDown);
     document.addEventListener("touchstart", onMouseDown);
     userInfo = await getUserInfo();
@@ -39,6 +38,7 @@ async function setProductCard1() {
     document.getElementById("card1ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image1\" src=\"" + newProduct.imageLocation + "\" />";
     document.getElementById("card1Text").innerHTML = newProduct.Description;
     card1ProductID = newProduct.productID;
+    setChatLink();
 }
 
 //set product card 2 with a new product
@@ -47,6 +47,7 @@ async function setProductCard2() {
     document.getElementById("card2ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image2\"  src=\"" + newProduct.imageLocation + "\" />";
     document.getElementById("card2Text").innerHTML = newProduct.Description;
     card2ProductID = newProduct.productID;
+    setChatLink();
 }
 
 //Mouse and touch events
@@ -100,14 +101,12 @@ function onMouseUp(e) {
             document.getElementById("card1").style.zIndex = 1;
             sendProductScore(card1ProductID, userID, like);
             setProductCard1();
-            document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card2ProductID + "\">Chat about the garment</a>";
             document.getElementById("card2").style.zIndex = 2;
             activeCard = "card2";
         } else {
             document.getElementById("card1").style.zIndex = 2;
             sendProductScore(card2ProductID, userID, like);
             setProductCard2();
-            document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card1ProductID + "\">Chat about the garment</a>";
             document.getElementById("card2").style.zIndex = 1;
             activeCard = "card1";
         }
@@ -128,4 +127,12 @@ function sendProductScore (productID, userID, like) {
         }
       });
       
+}
+
+function setChatLink() {
+    if (activeCard == "card1") {
+        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card1ProductID + "\">Chat about the garment</a>";
+    } else {
+        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card2ProductID + "\">Chat about the garment</a>";
+    }
 }
