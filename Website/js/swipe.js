@@ -36,7 +36,7 @@ async function getProduct() {
 async function setProductCard1() {
     const newProduct = await getProduct();
     document.getElementById("card1ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image1\" src=\"" + newProduct.imageLocation + "\" />";
-    document.getElementById("card1Text").innerHTML = newProduct.Description;
+    document.getElementById("card1Text").innerHTML = newProduct.Description + "<br />Swipe right to like, left to dislike<br />Or <a href=\"/swipe.html?productID=" + newProduct.productID + "\">Chat about it</a>";
     card1ProductID = newProduct.productID;
 }
 
