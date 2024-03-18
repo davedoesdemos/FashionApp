@@ -9,6 +9,7 @@
 }
 .chatInput {
     height: 23dvh;
+    text-align: center;
 }
 
 /* chat bubbles */
@@ -37,7 +38,7 @@
 textarea {
     border-radius: 1em 1em 1em 1em;
     width: 80%;
-    height: 18dvh;
+    height: 10dvh;
     padding: 12px 20px;
     box-sizing: border-box;
     background-color: #f8f8f8;
