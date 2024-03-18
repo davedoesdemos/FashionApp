@@ -3,7 +3,7 @@
 .cardholder {
     position: relative;
     overflow: hidden;
-    height: 53dvh;
+    height: 48dvh;
     width: 30dhv;
     margin-left: 35%;
     margin-right: 35%;
@@ -14,7 +14,7 @@
 @media screen and (max-width: 1000px) {
     .cardholder {
         width: 95%;
-        height: 89dvh;
+        height: 84dvh;
         margin-left: 2.5%;
         margin-right: 2.5%;
         margin-top: 2dvh;
@@ -59,3 +59,8 @@
     background-color: transparent;
 }
   
+
+.chatBox {
+    color: white;
+    height: 5dvh;
+}
