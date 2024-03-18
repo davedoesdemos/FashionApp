@@ -11,7 +11,7 @@
 }
 .tableCell {
     text-align: center;
-    color: white;
+    color: var(--main-text-color)
     font-size: x-large;
 }
 .gridImage {
@@ -19,7 +19,7 @@
     max-height: 20dvh;
 }
 .gridLink {
-    color: white;
+    color: var(--main-text-color)
     text-decoration: none;
 
 }
