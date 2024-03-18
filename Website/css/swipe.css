@@ -43,7 +43,7 @@
     max-height: 90%;
 }
 .cardTextBox {
-    color: white;
+    color: var(--light-text-colorr);
     width: 100%;
     height: 20%;
 }
@@ -61,6 +61,6 @@
   
 
 .chatBox {
-    color: white;
+    color: var(--light-text-color);
     height: 5dvh;
 }

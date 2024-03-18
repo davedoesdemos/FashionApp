@@ -7,11 +7,11 @@
     margin-right: 10dvw;
     margin-top: 20dvh;
     margin-bottom: 20dvh;
-    background-color: black;
+    background-color: var(--main-bg-color);
 }
 .tableCell {
     text-align: center;
-    color: var(--main-text-color)
+    color: var(--light-text-color);
     font-size: x-large;
 }
 .gridImage {
@@ -19,7 +19,7 @@
     max-height: 20dvh;
 }
 .gridLink {
-    color: var(--main-text-color)
+    color: var(--light-text-color);
     text-decoration: none;
 
 }
