@@ -94,3 +94,53 @@ CREATE TABLE userProductScores (
 CREATE USER [MyManagedIdentity] FROM EXTERNAL PROVIDER;
 ALTER ROLE db_datareader ADD MEMBER [MyManagedIdentity];
 ALTER ROLE db_datawriter ADD MEMBER [MyManagedIdentity];
+
+CREATE TABLE products (
+    productID int IDENTITY(1,1) PRIMARY KEY,
+    Name VARCHAR(100),
+    Description VARCHAR(MAX),
+    imageLocation VARCHAR(255)
+);
+
+ INSERT INTO [dbo].[productAttributes]([attributeName]]) VALUES ('sexy');
+
+ insert into [dbo].[productAttributeScores]([productID],[attributeID],[score]) VALUES (1,1,1);
+
+
+ select productName, productDescription, imageLocation, AttributeName, score
+	from [dbo].[products] 
+	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
+	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
+
+
+    ALTER TABLE dbo.dproductAttributeScores 
+ADD comment VARCHAR(255);
+
+
+
+CREATE TABLE productAttributeScores (
+    productID int FOREIGN KEY REFERENCES products(productID),
+    occasionID int FOREIGN KEY REFERENCES productOccasions(occasionID),
+    score INT,
+    comment VARCHAR(255)
+);
+
+CREATE TABLE productAttributeScores (
+    productID int FOREIGN KEY REFERENCES products(productID),
+    attributeID int FOREIGN KEY REFERENCES productAttributes(attributeID),
+    score INT
+);
+
+
+SELECT AVG(score) AS AverageScore FROM [dbo].[products] 
+	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
+	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
+	inner join [dbo].[userProductScores] on ([dbo].[products].productID = [dbo].[userProductScores].productID)
+	where userID = 1 and [dbo].[productAttributeScores].attributeID = 1; 
+
+ select userID, likeScore, [dbo].[products].productID, AttributeName, score
+	from [dbo].[products] 
+	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
+	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
+	inner join [dbo].[userProductScores] on ([dbo].[products].productID = [dbo].[userProductScores].productID)
+	where userID = 1 and [dbo].[productAttributeScores].attributeID = 1;
