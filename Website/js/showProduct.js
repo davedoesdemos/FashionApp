@@ -18,7 +18,7 @@ async function pageFirstLoad() {
     document.getElementById("cellName").innerHTML = productDetails.productName;
     document.getElementById("cellDescription").innerHTML = productDetails.productDescription;
     productAttributeScores.forEach(element => {
-        document.getElementById("cellDetails").innerHTML += element.attributeName;
+        document.getElementById("cellDetails").innerHTML += "<span class=\"attributeScoreDetails\">" + element.attributeName; + " " + element.score + " " + element.comment "</span><br />";
     });
     
 
