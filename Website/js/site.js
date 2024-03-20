@@ -98,3 +98,17 @@ async function getOccasions() {
     });
     return response.json(); // parses JSON response into native JavaScript objects
 }
+
+//get userScores
+async function getUserScores(userID) {
+    const response = await fetch("https://prod2-03.swedencentral.logic.azure.com:443/workflows/36996e4f6c73405ea5cf8d0773c81998/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=6HwpoSXcZZIyFm5iibSB_9WFcPB1VosZWxGNdSqqa7w", {
+        method: "POST",
+        body: JSON.stringify({
+            "userID": userID
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+}

@@ -138,6 +138,12 @@ SELECT AVG(score) AS AverageScore FROM [dbo].[products]
 	inner join [dbo].[userProductScores] on ([dbo].[products].productID = [dbo].[userProductScores].productID)
 	where userID = 1 and [dbo].[productAttributeScores].attributeID = 1; 
 
+    SELECT AVG(score) AS AverageScore FROM [dbo].[products] 
+	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
+	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
+	inner join [dbo].[userProductScores] on ([dbo].[products].productID = [dbo].[userProductScores].productID)
+	where userID = 'd3964a54-ce47-46b6-9798-d0fe3aa9e1e6' and [dbo].[productAttributeScores].attributeID = 1 and [dbo].[userProductScores].likeScore = 1; 
+
  select userID, likeScore, [dbo].[products].productID, AttributeName, score
 	from [dbo].[products] 
 	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
