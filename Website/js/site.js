@@ -37,7 +37,7 @@ async function getProductAttributeScores() {
 
 //get Occasion score details of the product
 async function getProductOccasionScores() {
-    const response = await fetch("https://prod2-03.swedencentral.logic.azure.com:443/workflows/4ad6606c2d514a2cb1bb1c81d2020e54/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uzcf9_OPt7dYNrpY_qPqf0N2bIfS1kDuHVJZahK2d_0", {
+    const response = await fetch("https://prod2-28.swedencentral.logic.azure.com:443/workflows/9a7cdc7452804b5ea20a869e79f1f574/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZIqeXETw6EPz3-A9TlrV35fL7YLHGAjXuNoC5e6_1LM", {
         method: "POST",
         body: JSON.stringify({
             "productID": productID
