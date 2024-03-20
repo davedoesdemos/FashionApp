@@ -3,3 +3,7 @@
     width: 100%;
     overflow: scroll;
 }
+.productImage {
+    max-width: 10dvw;
+    max-height: 15dvh;
+}

@@ -50,7 +50,7 @@ async function getProductOccasionScores() {
 }
 
 //get all products by Attribute
-async function getProductOccasionScores(attributeName) {
+async function getProductsByAttribute(attributeName) {
     const response = await fetch("https://prod2-17.swedencentral.logic.azure.com:443/workflows/021ac46724bc48b5b73a7b2167198326/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c00SMNcAkKlN1MsRP2nF4aT6082EgG_k9oGz5S0-qno", {
         method: "POST",
         body: JSON.stringify({
@@ -64,7 +64,7 @@ async function getProductOccasionScores(attributeName) {
 }
 
 //get all products by Occasion
-async function getProductOccasionScores(occasionName) {
+async function getProductsByOccasion(occasionName) {
     const response = await fetch("https://prod2-28.swedencentral.logic.azure.com:443/workflows/d2289f98cfd54501919ef9990e1704a1/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=4m7rVJLiUr4_UTqFqgF7D1I9KtTJBgiE5zwQfIwnGS0", {
         method: "POST",
         body: JSON.stringify({
