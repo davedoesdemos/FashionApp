@@ -38,14 +38,14 @@ function getCatalog(type, tag) {
         getProductsByOccasion(tag).then((products) => {
             document.getElementById("productPane").innerHTML = "<h1>tag</h1><br />";
             products.forEach(element => {
-                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\" src=\"" + element.imageLocation + "\" /><br />" + element.score.ToString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br /><button onclick=\"addToCart('" + element.productID + "</div>";
+                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\" src=\"" + element.imageLocation + "\" /><br />" + element.score.toString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br /><button onclick=\"addToCart('" + element.productID + "</div>";
             });
         });
     } else {
         getProductsByAttribute(tag).then((products) => {
             document.getElementById("productPane").innerHTML = "";
             products.forEach(element => {
-                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\"  src=\"" + element.imageLocation + "\" /><br />" + element.score.ToString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br /><button onclick=\"addToCart('" + element.productID + "</div>";
+                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\"  src=\"" + element.imageLocation + "\" /><br />" + element.score.toString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br /><button onclick=\"addToCart('" + element.productID + "</div>";
             });
         });
     }
