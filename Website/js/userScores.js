@@ -9,7 +9,7 @@ async function pageFirstLoad() {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
     var userID = userInfo.clientPrincipal.userId;
-    const userScores = getUserScores(userID)
+    const userScores = getUserScores(userID);
     
     document.getElementById("userScores").innerHTML = "<tr><th>Attribute</th><th>Like</th><th>Dislike</th></tr>";
     userScores.forEach(element => {
