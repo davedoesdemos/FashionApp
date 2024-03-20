@@ -17,6 +17,9 @@ async function pageFirstLoad() {
     document.getElementById("cellImage").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
     document.getElementById("cellName").innerHTML = productDetails.productName;
     document.getElementById("cellDescription").innerHTML = productDetails.productDescription;
-    document.getElementById("cellDetails").innerHTML = productAttributeScores;
+    productAttributeScores.forEach(element => {
+        document.getElementById("cellDetails").innerHTML += element.attributeName;
+    });
+    
 
 }
