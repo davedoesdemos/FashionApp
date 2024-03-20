@@ -9,11 +9,11 @@ async function pageFirstLoad() {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
     var userID = userInfo.clientPrincipal.userId;
-    const userScores = getUserScores(userID);
+    const userScores = await getUserScores(userID);
     
-    document.getElementById("userScores").innerHTML = "<tr><th>Attribute</th><th>Like</th><th>Dislike</th></tr>";
+    document.getElementById("userScoresTable").innerHTML = "<tr><th>Attribute</th><th>Like</th><th>Dislike</th></tr>";
     userScores.forEach(element => {
-        document.getElementById("userScores").innerHTML += "<tr><td>" + element.attributeName + "</td><td>" + element.like + "</td><td>" + element.dislike + "</td></tr>";
+        document.getElementById("userScoresTable").innerHTML += "<tr><td>" + element.attributeName + "</td><td>" + element.like + "</td><td>" + element.dislike + "</td></tr>";
     })
 
 }
