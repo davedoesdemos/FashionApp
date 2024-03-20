@@ -19,7 +19,7 @@ async function pageFirstLoad() {
     document.getElementById("cellDescription").innerHTML = productDetails.productDescription;
     document.getElementById("cellDetails").innerHTML = "";
     productAttributeScores.forEach(element => {
-        document.getElementById("cellDetails").innerHTML += "<span class=\"attributeScoreDetails\">" + element.attributeName + " " + element.score.toString() + " " + element.comment + "</span><br />";
+        document.getElementById("cellDetails").innerHTML += "<span class=\"attributeScoreDetails\">" + element.attributeName + " " + element.score.toString() + "/10 " + element.comment + "</span><br />";
     });
     
 
