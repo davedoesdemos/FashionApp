@@ -1,7 +1,6 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productID = urlParams.get('productID')
-const chatHistory = [];
 
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
@@ -14,8 +13,10 @@ async function pageFirstLoad() {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
     const productDetails = await getProductDetails();
-    const productAttributeScores = await getProductAttributeScores();
+    var productAttributeScores = await getProductAttributeScores();
     document.getElementById("cellImage").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
     document.getElementById("cellName").innerHTML = productDetails.productName;
     document.getElementById("cellDescription").innerHTML = productDetails.productDescription;
+    document.getElementById("cellDetails").innerHTML = productAttributeScores;
+
 }
