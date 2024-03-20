@@ -10,12 +10,12 @@ async function pageFirstLoad() {
     }
     const occasions = await getOccasions();
     document.getElementById("occasionSelector").innerHTML = "";
-    productAttributeScores.forEach(element => {
+    occasions.forEach(element => {
         document.getElementById("occasionSelector").innerHTML += "<option value=\"" + element.occasionName + "\">" + element.occasionName + "</option><br />";
     });
     const attributes = await getAttributes();
     document.getElementById("attributeSelector").innerHTML = "";
-    productAttributeScores.forEach(element => {
+    attributes.forEach(element => {
         document.getElementById("attributeSelector").innerHTML += "<option value=\"" + element.attributeName + "\">" + element.attributeName + "</option><br />";
     });
 }
