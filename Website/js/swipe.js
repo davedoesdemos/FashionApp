@@ -36,7 +36,7 @@ async function getProduct() {
 async function setProductCard1() {
     const newProduct = await getProduct();
     document.getElementById("card1ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image1\" src=\"" + newProduct.imageLocation + "\" />";
-    document.getElementById("card1Text").innerHTML = newProduct.Description;
+    document.getElementById("card1Text").innerHTML = newProduct.productDescription;
     card1ProductID = newProduct.productID;
     setChatLink();
 }
@@ -45,7 +45,7 @@ async function setProductCard1() {
 async function setProductCard2() {
     const newProduct = await getProduct();
     document.getElementById("card2ImageBox").innerHTML = "                    <img class=\"cardImage\" id=\"image2\"  src=\"" + newProduct.imageLocation + "\" />";
-    document.getElementById("card2Text").innerHTML = newProduct.Description;
+    document.getElementById("card2Text").innerHTML = newProduct.productDescription;
     card2ProductID = newProduct.productID;
     setChatLink();
 }

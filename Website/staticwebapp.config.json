@@ -1,15 +1,15 @@
   {
     "routes": [
       {
-        "route": "/logintest.html",
-        "allowedRoles": ["authenticated"]
-      },
-      {
         "route": "/swipe.html",
         "allowedRoles": ["authenticated"]
       },
       {
         "route": "/chat.html",
+        "allowedRoles": ["authenticated"]
+      },
+      {
+        "route": "/showProduct.html",
         "allowedRoles": ["authenticated"]
       }
     ],

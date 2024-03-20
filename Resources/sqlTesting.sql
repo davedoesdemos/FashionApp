@@ -102,7 +102,7 @@ CREATE TABLE products (
     imageLocation VARCHAR(255)
 );
 
- INSERT INTO [dbo].[productAttributes]([attributeName]]) VALUES ('sexy');
+ INSERT INTO [dbo].[productAttributes]([attributeName]) VALUES ('sexy');
 
  insert into [dbo].[productAttributeScores]([productID],[attributeID],[score]) VALUES (1,1,1);
 
@@ -144,3 +144,14 @@ SELECT AVG(score) AS AverageScore FROM [dbo].[products]
 	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
 	inner join [dbo].[userProductScores] on ([dbo].[products].productID = [dbo].[userProductScores].productID)
 	where userID = 1 and [dbo].[productAttributeScores].attributeID = 1;
+
+
+    insert into [dbo].[productAttributeScores] ([productID],[attributeID],[score],[comment]) VALUES (13, (select top (1) attributeID from [dbo].[productAttributes] where attributeName = 'fun'), 3, 'bob');
+
+
+     select productName, productDescription, imageLocation, AttributeName, score
+	from [dbo].[products] 
+	inner join [dbo].[productAttributeScores] on (products.productID = productAttributeScores.productID)
+	inner join [dbo].[productAttributes] on (productAttributeScores.attributeID = productAttributes.attributeID)
+	where attributeName = 'formal'
+	order by score desc

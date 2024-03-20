@@ -1,0 +1,17 @@
+.productPane {
+    height: 93dvh;
+    width: 100%;
+    align: center;
+}
+td {
+    color: var(--light-text-color);
+}
+.productTable {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#cellName {
+    font-size: xx-large;
+    font-weight: bolder;
+}

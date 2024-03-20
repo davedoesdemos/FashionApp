@@ -1,6 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productID = urlParams.get('productID')
+const imageLocation = "";
 const chatHistory = [];
 
 //Set up on load events
@@ -15,6 +16,7 @@ async function pageFirstLoad() {
     }
     doChat();
     const productDetails = await getProductDetails();
+    imageLocation = productDetails.imageLocation;
     document.getElementById("imageHolder").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
 }
 
@@ -24,7 +26,7 @@ async function getChat() {
     const response = await fetch("https://prod2-10.swedencentral.logic.azure.com:443/workflows/bee876c18e2a408c9ff68004329db8bd/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WgpBBXl_5x0uP3IFt-gGsnb7hjplMW3wz38-9eEmHrI", {
         method: "POST",
         body: JSON.stringify({
-          "productID": productID,
+          "imageLocation": imageLocation,
           "chatHistory": chatHistory
         }),
         headers: {
