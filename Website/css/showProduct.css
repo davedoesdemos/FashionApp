@@ -2,6 +2,7 @@
     height: 93dvh;
     width: 100%;
     align: center;
+    overflow:scroll;
 }
 td {
     color: var(--light-text-color);
