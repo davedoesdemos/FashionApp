@@ -1,7 +1,7 @@
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const productID = urlParams.get('productID')
-const imageLocation = "";
+var imageLocation = "";
 const chatHistory = [];
 
 //Set up on load events
