@@ -34,3 +34,17 @@ async function getProductAttributeScores() {
     });
     return response.json(); // parses JSON response into native JavaScript objects
 }
+
+//get Occasion score details of the product
+async function getProductOccasionScores() {
+    const response = await fetch("https://prod2-03.swedencentral.logic.azure.com:443/workflows/4ad6606c2d514a2cb1bb1c81d2020e54/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=uzcf9_OPt7dYNrpY_qPqf0N2bIfS1kDuHVJZahK2d_0", {
+        method: "POST",
+        body: JSON.stringify({
+            "productID": productID
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+}
