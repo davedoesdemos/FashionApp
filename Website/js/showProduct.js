@@ -14,6 +14,7 @@ async function pageFirstLoad() {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
     const productDetails = await getProductDetails();
+    const productAttributeScores = await getProductAttributeScores();
     document.getElementById("cellImage").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
     document.getElementById("cellName").innerHTML = productDetails.productName;
     document.getElementById("cellDescription").innerHTML = productDetails.productDescription;

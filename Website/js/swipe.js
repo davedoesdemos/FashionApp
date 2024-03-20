@@ -131,8 +131,8 @@ function sendProductScore (productID, userID, like) {
 
 function setChatLink() {
     if (activeCard == "card1") {
-        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card1ProductID + "\">Chat about the garment</a>";
+        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card1ProductID + "\">Chat about the garment</a>, <a href=\"showProduct.html?productID=" + card1ProductID + "\">view details</a>";
     } else {
-        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card2ProductID + "\">Chat about the garment</a>";
+        document.getElementById("chatBox").innerHTML = "Swipe right to like, left to dislike<br />Or <a href=\"chat.html?productID=" + card2ProductID + "\">Chat about the garment</a>, <a href=\"showProduct.html?productID=" + card1ProductID + "\">view details</a>";
     }
 }
