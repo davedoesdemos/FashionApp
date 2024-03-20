@@ -14,10 +14,10 @@ async function pageFirstLoad() {
     } else {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
-    doChat();
     const productDetails = await getProductDetails();
     imageLocation = productDetails.imageLocation;
     document.getElementById("imageHolder").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
+    doChat();
 }
 
 //Get a new chat response from the chat API
