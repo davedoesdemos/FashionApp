@@ -4,9 +4,9 @@
         <title>Fashion App</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" type="text/css" href="css/site.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/catalog.css" />
         <script src="js/site.js"></script>
-        <script src="js/index.js"></script> 
+        <script src="js/catalog.js"></script> 
     </head>
     <body>
         <div class="header">
@@ -20,18 +20,16 @@
                 User (logout)
             </div>
         </div>
-        <div class="grid">
-            <table class="tableGrid">
-                <tr>
-                    <td class="tableCell"><a class="gridLink" href="ctaalog.html"></a><img class="gridImage" src="images/IconCatalog.png" /><br />Catalogue</a></td>
-                    <td class="tableCell"><a class="gridLink" href="swipe.html"><img class="gridImage" src="images/IconSwipe.png" /><br />Swipe</a></td>
-                </tr>
-                <tr>
-                    <td class="tableCell"><img class="gridImage" src="images/IconChat.png" /><br />Chat coming soon</td>
-                    <td class="tableCell"></td>
-                </tr>
+        <div class="selectors" id="selectors">
+            <select name="Occasions" id="occasionSelector">
+                <option value="volvo">option 1</option>
+            </select>
+            <select name="Attributes" id="attributeSelector">
+                <option value="volvo">option 1</option>
+            </select>
+        </div>
+        <div class="productPane" id="productPane">
 
-            </table>
         </div>
         <div class="footer">
             <h2>&copy; Dave Lusty</h2>

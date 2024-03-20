@@ -11,6 +11,10 @@
       {
         "route": "/showProduct.html",
         "allowedRoles": ["authenticated"]
+      },
+      {
+        "route": "/catalog.html",
+        "allowedRoles": ["authenticated"]
       }
     ],
     "responseOverrides": {

@@ -1,0 +1,5 @@
+.productPane {
+    height: 93dvh;
+    width: 100%;
+    overflow: scroll;
+}
