@@ -1,9 +1,39 @@
-><html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <title>Fashion App</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <link rel="stylesheet" type="text/css" href="css/chat.css" />
+        <link rel="stylesheet" type="text/css" href="css/pictureChat.css" />
+        <script src="js/site.js"></script>
         <script src="js/pictureChat.js"></script> 
     </head>
     <body>
-        <input type="file" id="inputFile" accept="image/*" />
-        <div id="Dave"></div>
+        <div class="header">
+            <div class="leftColumn">
+                <a href="index.html"><img id="sitelogo" src="images/SquareLogo.png" /></a>
+            </div>
+            <div class="middleColumn">
+                <span class="titleBar" id="title">Fashion App</span>
+            </div>
+            <div class="rightColumn" id = "loginbox">
+                User (logout)
+            </div>
+        </div>
+        <div class="fileSelector">
+            <input type="file" id="inputFile" accept="image/*" />
+        </div>
+        <div class="imageHolder" id="imageHolder"></div>
+        <div class="chatWindow" id="chatWindow">
+        </div>
+        <div class="chatInput">
+            <form>
+                <textarea class="inputbox" id="chatInput">&nbsp;</textarea>
+            </form>
+        </div>
+        <div class="footer">
+            <h2>&copy; Dave Lusty</h2>
+        </div>
     </body>
 </html>
