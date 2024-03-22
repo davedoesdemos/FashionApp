@@ -1,6 +1,5 @@
 var imageB64 = "";
 var chatHistory = [];
-document.getElementById("chatWindow").innerHTML = "";
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
@@ -31,6 +30,7 @@ function readFileAsData(file) {
 async function readFile() {
     imageB64 = "";
     chatHistory = [];
+    document.getElementById("chatWindow").innerHTML = "";
     document.getElementById("fileName").innerHTML =  this.files[0].name;
     imageB64 = await readFileAsData(this.files[0]);
     
