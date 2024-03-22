@@ -38,7 +38,7 @@ async function getChat() {
 
 async function doChat() {
     const chatResponse = await getChat();
-    const newMessage = chatResponse.choices[0].message.content
+    const newMessage = chatResponse.choices[0].message.content;
     chatHistory.push(newMessage);
     document.getElementById("chatWindow").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
     document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
