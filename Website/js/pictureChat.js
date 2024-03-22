@@ -1,5 +1,6 @@
 var imageB64 = "";
 var chatHistory = [];
+document.getElementById("chatWindow").innerHTML = "";
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
