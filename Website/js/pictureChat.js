@@ -8,11 +8,14 @@ async function pageFirstLoad() {
 }
 
 function readFile() {
+    imageB64 = "";
     const imageReader = new FileReader();
     imageReader.onload = function() {
         imageB64 = imageReader.result;
     }
     imageReader.readAsDataURL(this.files[0]);
+    
+    document.getElementById("imageHolder").innerHTML = "<img class=\"productImage\" src=\"" + imageB64 + "\" />";
     doChat();
 }
 
@@ -35,7 +38,16 @@ async function getChat() {
 async function doChat() {
     const chatResponse = await getChat();
     const newMessage = chatResponse.choices[0].message.content
-    //chatHistory.push(newMessage);
+    chatHistory.push(newMessage);
     document.getElementById("chatWindow").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
-    //document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
+    document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
+}
+
+function onKeyPress(e) {
+  if (e.key === "Enter") {
+      chatHistory.push(document.getElementById("chatInput").value);
+      document.getElementById("chatWindow").innerHTML += "<span class=\"humanComment\">" + document.getElementById("chatInput").value + "</span>";
+      document.getElementById("chatInput").value = "";
+      doChat();
+  }
 }
