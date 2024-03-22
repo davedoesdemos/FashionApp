@@ -1,5 +1,5 @@
 var imageB64 = "";
-var chatHistory = "";
+const chatHistory = [];
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
@@ -7,7 +7,7 @@ async function pageFirstLoad() {
     document.querySelector("#inputFile").addEventListener("change", readFile);
 }
 
-function readFile() {
+async function readFile() {
     imageB64 = "";
     document.getElementById("fileName").innerHTML =  this.files[0].name;
     const imageReader = new FileReader();
@@ -37,8 +37,8 @@ async function getChat() {
 }
 
 async function doChat() {
-    const chatResponse = await getChat();
-    const newMessage = chatResponse.choices[0].message.content;
+    var chatResponse = await getChat();
+    var newMessage = chatResponse.choices[0].message.content;
     chatHistory.push(newMessage);
     document.getElementById("chatWindow").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
     document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
