@@ -9,7 +9,7 @@ async function pageFirstLoad() {
 
 function readFile() {
     imageB64 = "";
-    document.getElementById("fileName").innerHTML =  = this.files[0].name;
+    document.getElementById("fileName").innerHTML =  this.files[0].name;
     const imageReader = new FileReader();
     imageReader.onload = function() {
         imageB64 = imageReader.result;
