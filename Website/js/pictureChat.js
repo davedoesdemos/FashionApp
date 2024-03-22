@@ -8,7 +8,6 @@ async function pageFirstLoad() {
 }
 
 function readFile() {
-    document.getElementById("Dave").innerHTML = this.files[0].name;
     const imageReader = new FileReader();
     imageReader.onload = function() {
         imageB64 = imageReader.result;
@@ -37,6 +36,6 @@ async function doChat() {
     const chatResponse = await getChat();
     const newMessage = chatResponse.choices[0].message.content
     //chatHistory.push(newMessage);
-    document.getElementById("Dave").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
+    document.getElementById("chatWindow").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
     //document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
 }
