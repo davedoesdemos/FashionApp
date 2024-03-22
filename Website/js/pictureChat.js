@@ -23,6 +23,7 @@ function readFileAsData(file) {
 
 async function readFile() {
     imageB64 = "";
+    chatHistory = [];
     document.getElementById("fileName").innerHTML =  this.files[0].name;
     imageB64 = await readFileAsData(this.files[0]);
     
