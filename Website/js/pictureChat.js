@@ -1,5 +1,5 @@
 var imageB64 = "";
-const chatHistory = [];
+var chatHistory = [];
 //Set up on load events
 window.addEventListener('DOMContentLoaded', pageFirstLoad, false);
 
