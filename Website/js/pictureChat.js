@@ -7,14 +7,24 @@ async function pageFirstLoad() {
     document.querySelector("#inputFile").addEventListener("change", readFile);
 }
 
+function readFileAsData(file) {
+    return new Promise((resolve, reject) => {
+        const imageReader = new FileReader();
+  
+        imageReader.onloadend = function() {
+            resolve(imageReader.result);
+        }
+  
+        imageReader.onerror = reject;
+  
+        imageReader.readAsDataURL(file);
+    });
+  }
+
 async function readFile() {
     imageB64 = "";
     document.getElementById("fileName").innerHTML =  this.files[0].name;
-    const imageReader = new FileReader();
-    imageReader.onload = function() {
-        imageB64 = imageReader.result;
-    }
-    imageReader.readAsDataURL(this.files[0]);
+    imageB64 = await readFileAsData(this.files[0]);
     
     document.getElementById("imageHolder").innerHTML = "<img class=\"productImage\" src=\"" + imageB64 + "\" />";
     doChat();
