@@ -6,3 +6,12 @@ The product catalog is automatically created by dropping images into a blob stor
 
 ## Swipe
 The user can log in and swipe images to decide if they like or dislike the garment. The results are stored in the database to build up a picture of what the user will like using the attribute scores of the garment.
+
+## Architecture
+
+![architecture diagram](images/architecture.png)
+
+## Documentation
+
+[Database](database.md)
+[Azure B2C](b2c.md)
