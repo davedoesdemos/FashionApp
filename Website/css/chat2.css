@@ -10,6 +10,16 @@
 }
 
 /* chat bubbles */
+.imageComment {
+    position: relative;
+    float: right;
+    text-align: right;
+    width: 80%;
+    padding-right: 1dvw;
+    margin-top: 1dvh;
+    margin-right: 2dvw;
+    margin-bottom: 1dvh;
+}
 .botComment {
     position: relative;
     float: right;
@@ -45,9 +55,10 @@ textarea {
     background-color: #f8f8f8;
     color: var(--dark-text-color);
     resize: none;
+    font-size: 18pt;
 }
 
 .productImage {
-    max-height: 98%;
+    height: 40dvh;
     max-width: 98%;
 }

@@ -16,8 +16,9 @@ async function pageFirstLoad() {
     //}
     const productDetails = await getProductDetails();
     imageLocation = productDetails.imageLocation;
-    document.getElementById("imageHolder").innerHTML = "<img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" />";
+    document.getElementById("chatWindow").innerHTML = "<span class=\"imageComment\"><img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" /></span>";
     doChat();
+    document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
 }
 
 //Get a new chat response from the chat API
@@ -41,7 +42,7 @@ async function doChat() {
     const newMessage = chatResponse.choices[0].message.content;
     chatHistory.push(newMessage);
     document.getElementById("chatWindow").innerHTML += "<span class=\"botComment\">" + newMessage + "</span>";
-    document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 function onKeyPress(e) {
