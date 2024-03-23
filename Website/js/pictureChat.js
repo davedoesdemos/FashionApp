@@ -33,7 +33,7 @@ async function readFile() {
     document.getElementById("chatWindow").innerHTML = "";
     document.getElementById("fileName").innerHTML =  this.files[0].name;
     imageB64 = await readFileAsData(this.files[0]);
-    document.getElementById("chatWindow").innerHTML = "<span class=\"imageComment\"><img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" /></span>";
+    document.getElementById("chatWindow").innerHTML = "<span class=\"imageComment\"><img class=\"productImage\" src=\"" + imageB64 + "\" /></span>";
     doChat();
     document.getElementById("chatInput").addEventListener("keypress", onKeyPress);
 }
