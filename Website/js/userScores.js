@@ -15,5 +15,4 @@ async function pageFirstLoad() {
     userScores.forEach(element => {
         document.getElementById("userScoresTable").innerHTML += "<tr><td>" + element.attributeName + "</td><td>" + element.like + "</td><td>" + element.dislike + "</td></tr>";
     })
-
 }

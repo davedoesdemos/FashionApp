@@ -4,3 +4,7 @@
     padding: 0.5rem;
     text-align: center;
 }
+.userScoresTable {
+    margin-right: auto;
+    margin-left: auto;
+}
