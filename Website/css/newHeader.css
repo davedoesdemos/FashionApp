@@ -1,17 +1,3 @@
-:root {
-    --main-bg-color: black;
-    --main-accent-color: hotpink;
-    --light-text-color: white;
-    --dark-text-color: black;
-}
-/* Body */
-body {
-    background-color: var(--main-bg-color);
-    font-family: Arial;
-    font-size: 2.5rem;
-    padding: 0;
-    margin: 0;
-}
 /* Header */
 .header {
     color: var(--dark-text-color);
