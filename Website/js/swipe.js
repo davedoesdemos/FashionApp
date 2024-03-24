@@ -17,10 +17,10 @@ async function pageFirstLoad() {
     document.addEventListener("touchstart", onMouseDown);
     userInfo = await getUserInfo();
     if (userInfo.clientPrincipal != null) {
-        document.getElementById("loginboxCell").innerHTML = userInfo.clientPrincipal.userDetails + " <a href=\"/.auth/logout\">(Logout)</a>";
+        document.getElementById("loginbox").innerHTML = userInfo.clientPrincipal.userDetails + " <a href=\"/.auth/logout\">(Logout)</a>";
         userID = userInfo.clientPrincipal.userId;
     } else {
-        document.getElementById("loginboxCell").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
+        document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
 }
 
