@@ -1,7 +1,6 @@
 .productPane {
-    height: 93dvh;
     width: 100%;
-    overflow: scroll;
+    color: var(--light-text-color);
 }
 .productImage {
     max-width: 15dvw;
