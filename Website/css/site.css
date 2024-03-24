@@ -25,11 +25,11 @@ body {
     height: 100%;
 }
 .middleColumn {
-    width: 65dvw;
+    width: 20rem;
     height: 100%;
 }
 .rightColumn {
-    width: 30dvw;
+    width: 54rem;
     height: 100%;
     text-align: right;
     font-size: 2rem;

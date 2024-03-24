@@ -9,12 +9,12 @@ async function pageFirstLoad() {
         document.getElementById("loginbox").innerHTML = "<a href=\"/.auth/login/aadb2c\">Login</a>";
     }
     const occasions = await getOccasions();
-    document.getElementById("occasionSelector").innerHTML = "";
+    document.getElementById("occasionSelector").innerHTML = "<option value=\"Occasion\">Occasion</option><br />";
     occasions.forEach(element => {
         document.getElementById("occasionSelector").innerHTML += "<option value=\"" + element.occasionName + "\">" + element.occasionName + "</option><br />";
     });
     const attributes = await getAttributes();
-    document.getElementById("attributeSelector").innerHTML = "";
+    document.getElementById("attributeSelector").innerHTML = "<option value=\"Attribute\">Attribute</option><br />";
     attributes.forEach(element => {
         document.getElementById("attributeSelector").innerHTML += "<option value=\"" + element.attributeName + "\">" + element.attributeName + "</option><br />";
     });
@@ -38,14 +38,14 @@ function getCatalog(type, tag) {
         getProductsByOccasion(tag).then((products) => {
             document.getElementById("productPane").innerHTML = "<h1>tag</h1><br />";
             products.forEach(element => {
-                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\" src=\"" + element.imageLocation + "\" /><br />" + element.score.toString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br />" + element.comment + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></div>";
+                document.getElementById("productPane").innerHTML += "<div class=\"product\"><table><tr><td><img class=\"productImage\" src=\"" + element.imageLocation + "\" /></td><td>" + element.score.toString() + "/10 for " + tag + "<br />" + element.comment + "<br /><br />" + element.productDescription + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></td></tr></table></div>";
             });
         });
     } else {
         getProductsByAttribute(tag).then((products) => {
             document.getElementById("productPane").innerHTML = "<h1>tag</h1><br />";
             products.forEach(element => {
-                document.getElementById("productPane").innerHTML += "<div class=\"product\"><img class=\"productImage\" src=\"" + element.imageLocation + "\" /><br />" + element.score.toString() + "/10 for " + tag + " " + element.productName + "<br />" + element.productDescription + "<br />" + element.comment + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></div>";
+                document.getElementById("productPane").innerHTML += "<div class=\"product\"><table><tr><td><img class=\"productImage\" src=\"" + element.imageLocation + "\" /></td><td>" + element.score.toString() + "/10 for " + tag + "<br />" + element.comment + "<br /><br />" + element.productDescription + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></td></tr></table></div>";
             });
         });
     }

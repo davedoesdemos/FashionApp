@@ -9,4 +9,12 @@
 }
 .product {
     color: var(--light-text-color);
+    font-size: 1.5rem;
+}
+.selector {
+    height: 3rem;
+    font-size: 2rem;
+}
+.optionText  {
+    font-size: 2rem;
 }
