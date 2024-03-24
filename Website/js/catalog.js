@@ -36,14 +36,14 @@ function attributeChanged() {
 function getCatalog(type, tag) {
     if (type == "occasion") {
         getProductsByOccasion(tag).then((products) => {
-            document.getElementById("productPane").innerHTML = "<h2>" + tag + "</h2>";
+            document.getElementById("productPane").innerHTML = "<div class=\"tagHeader\">" + tag + "</div>";
             products.forEach(element => {
                 document.getElementById("productPane").innerHTML += "<div class=\"product\"><table><tr><td><img class=\"productImage\" src=\"" + element.imageLocation + "\" /></td><td>" + element.score.toString() + "/10 for " + tag + "<br />" + element.comment + "<br /><br />" + element.productDescription + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></td></tr></table><br /></div>";
             });
         });
     } else {
         getProductsByAttribute(tag).then((products) => {
-            document.getElementById("productPane").innerHTML = "<h2>" + tag + "</h2>";
+            document.getElementById("productPane").innerHTML = "<div class=\"tagHeader\">" + tag + "</div>";
             products.forEach(element => {
                 document.getElementById("productPane").innerHTML += "<div class=\"product\"><table><tr><td><img class=\"productImage\" src=\"" + element.imageLocation + "\" /></td><td>" + element.score.toString() + "/10 for " + tag + "<br />" + element.comment + "<br /><br />" + element.productDescription + "<a href=\"showProduct.html?productID=" + element.productID + "\">Show Product Detail</a> <a href=\"chat.html?productID=" + element.productID + "\">Chat about product</a></td></tr></table><br /></div>";
             });
