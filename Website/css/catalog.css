@@ -4,12 +4,14 @@
     overflow: scroll;
 }
 .productImage {
-    max-width: 10dvw;
+    max-width: 15dvw;
     max-height: 15dvh;
+    padding: 0.25rem;
 }
 .product {
     color: var(--light-text-color);
     font-size: 1.5rem;
+    padding: 0.25rem;
 }
 .selector {
     height: 3rem;
