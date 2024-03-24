@@ -1,4 +1,6 @@
 .userScorePane {
     color: var(--light-text-color);
     font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
 }
