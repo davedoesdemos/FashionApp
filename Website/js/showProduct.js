@@ -16,7 +16,7 @@ async function pageFirstLoad() {
     var productAttributeScores = await getProductAttributeScores();
     var productOccasionScores = await getProductOccasionScores();
     document.getElementById("productPane").innerHTML = "<div class=\"attributeImage\"><img class=\"productImage\" src=\"" + productDetails.imageLocation + "\" /></div>";
-    document.getElementById("productPane").innerHTML += productDetails.productDescription + "br />";
+    document.getElementById("productPane").innerHTML += productDetails.productDescription + "<br />";
     document.getElementById("productPane").innerHTML += "<h1>Attributes</h1>";
     productAttributeScores.forEach(element => {
         document.getElementById("productPane").innerHTML += "<span class=\"attributeScoreDetails\">" + element.attributeName + " " + element.score.toString() + "/10 " + element.comment + "</span><br />";
