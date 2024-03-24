@@ -2,6 +2,7 @@
     width: 100%;
     font-size: 1.5rem;
     color: var(--light-text-color);
+    padding: 0.5rem;
 }
 .productImage {
     height: 40dvh;
