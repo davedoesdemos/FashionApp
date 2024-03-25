@@ -1,5 +1,26 @@
 # FashionApp
-An app to demo LLMs for the fashion and retail industry
+
+**Produced by Dave Lusty**
+
+## Introduction
+
+An app to demo LLMs for the fashion and retail industry. This app was created as part of a hackathon and since refined. 
+
+The hack team were: 
+* Ola Taiwo
+* Keith Howling
+* Gary McMahon
+* Valmir Meneses
+* James Sibley
+* Xuan Ni Leong
+* Stefan Atanasiu
+* Robin Davidson
+* Jose Alonso
+* Thom McKiernan
+* Aaran Ladva
+* Renata B.
+* Lee Hilton-Smith
+* Taonga Banda
 
 ### Product Catalog
 The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).
@@ -53,6 +74,8 @@ There are pages for:
 The app uses Azure B2C for authentication. This allows us to use either Entra ID for a corporate app, local passwords for a self contained app, or third party social password systems such as Google, Facebook, or even Microsoft Live ID. Authorisation is done within the static web app in a config file which details which files require authentication to access. In the app, all files except the index landing page require authorisation.
 
 ## Build Documentation
+
+[Web App](Documentation/webapp.md)
 
 [Database](Documentation/database.md)
 
