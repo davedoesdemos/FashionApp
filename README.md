@@ -23,16 +23,22 @@ The hack team were:
 * Taonga Banda
 
 ### Product Catalog
-The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).
+
 <table>
 <tr>
 <td width="60%">The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).</td>
-<td width="40%"><a href="https://www.youtube.com/watch?v=YVrJ57StAoZg"><img src="https://img.youtube.com/vi/VrJ57StAoZg/0.jpg" /></a></td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=YVrJ57StAoZg"><img src="https://img.youtube.com/vi/VrJ57StAoZg/0.jpg" /><br />Video</a></td>
 </tr>
 </table>
 
 ### Swipe
-The user can log in and swipe images to decide if they like or dislike the garment. The results are stored in the database to build up a picture of what the user will like using the attribute scores of the garment.
+
+<table>
+<tr>
+<td width="60%">The user can log in and swipe images to decide if they like or dislike the garment. The results are stored in the database to build up a picture of what the user will like using the attribute scores of the garment.</td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=FqeBDm1covM"><img src="https://img.youtube.com/vi/FqeBDm1covM/0.jpg" /><br />Video</a></td>
+</tr>
+</table>
 
 ## Architecture
 
