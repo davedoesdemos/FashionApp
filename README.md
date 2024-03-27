@@ -27,7 +27,7 @@ The product catalog is automatically created by dropping images into a blob stor
 <table>
 <tr>
 <td width="60%">The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).</td>
-<td width="40%"><iframe class="videoBox" src="https://www.youtube.com/embed/DK9OPRCEEtI" frameborder="2" allowfullscreen></iframe></td>
+<td width="40%">[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/VrJ57StAoZg/0.jpg)](https://www.youtube.com/watch?v=YVrJ57StAoZg)</td>
 </tr>
 </table>
 
