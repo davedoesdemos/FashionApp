@@ -68,7 +68,7 @@ The hack team were:
 </table>
 
 ### Chat about image
-https://youtube.com/shorts/
+
 <table>
 <tr>
 <td width="60%">The user can also upload a picture of a garment or take a photo of their outfit and chat about how they could improve it or achieve different looks with the garment</td>
