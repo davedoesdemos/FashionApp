@@ -22,7 +22,7 @@ The hack team were:
 * Lee Hilton-Smith
 * Taonga Banda
 
-### Product Catalog
+### Product Ingest
 
 <table>
 <tr>
@@ -37,6 +37,42 @@ The hack team were:
 <tr>
 <td width="60%">The user can log in and swipe images to decide if they like or dislike the garment. The results are stored in the database to build up a picture of what the user will like using the attribute scores of the garment.</td>
 <td width="40%"><a href="https://www.youtube.com/watch?v=FqeBDm1covM"><img src="https://img.youtube.com/vi/FqeBDm1covM/0.jpg" /><br />Video</a></td>
+</tr>
+</table>
+
+### Catalog
+
+<table>
+<tr>
+<td width="60%">The user can sort the catalog by the attributes or occasions against which the product has been scored, allowing a much more human interface and browsing experience. We could also score the products against weather patterns such as rain, sun or cold, and use a weather API to show what would work today, or for an upcoming holiday.</td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=DK9OPRCEEtI"><img src="https://img.youtube.com/vi/DK9OPRCEEtI/0.jpg" /><br />Video</a></td>
+</tr>
+</table>
+
+### App Authentication and Authorisation
+
+<table>
+<tr>
+<td width="60%">The app uses Azure B2C to enable logging in with third party identity providers easily. Here we show a familiar login interface where someone can sign up or sign in either directly or with an existing ID.</td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=13mguxVR0t4"><img src="https://img.youtube.com/vi/13mguxVR0t4/0.jpg" /><br />Video</a></td>
+</tr>
+</table>
+
+### Chat about products
+
+<table>
+<tr>
+<td width="60%">The user can click the chat button next to any product in the catalog and have a conversation about it, deciding what to pair it with for different occasions or looks.</td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=7iOt1wcagOA"><img src="https://img.youtube.com/vi/7iOt1wcagOA/0.jpg" /><br />Video</a></td>
+</tr>
+</table>
+
+### Chat about image
+https://youtube.com/shorts/
+<table>
+<tr>
+<td width="60%">The user can also upload a picture of a garment or take a photo of their outfit and chat about how they could improve it or achieve different looks with the garment</td>
+<td width="40%"><a href="https://www.youtube.com/watch?v=GsA37el960E"><img src="https://img.youtube.com/vi/GsA37el960E/0.jpg" /><br />Video</a></td>
 </tr>
 </table>
 
