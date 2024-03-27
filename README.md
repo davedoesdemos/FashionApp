@@ -24,6 +24,12 @@ The hack team were:
 
 ### Product Catalog
 The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).
+<table>
+<tr>
+<td width="60%">The product catalog is automatically created by dropping images into a blob store. The images are then pushed through an LLM to get a description, and to score the garments for attributes (fun, formal, etc.) and occasions (wedding, black tie, party, etc.).</td>
+<td width="40%"><iframe class="videoBox" src="https://www.youtube.com/embed/DK9OPRCEEtI" frameborder="2" allowfullscreen></iframe></td>
+</tr>
+</table>
 
 ### Swipe
 The user can log in and swipe images to decide if they like or dislike the garment. The results are stored in the database to build up a picture of what the user will like using the attribute scores of the garment.
