@@ -25,6 +25,7 @@ Follow these instructions to create a repository and a static web app. We'll add
 </tr>
 </table>
 Here is an example of an index.html you can use to try out the web app. You can find the full source code for the fashion app in this repository under the website directory. This includes html for the pages, css for the styling, and javascript for the dynamic parts which load things and submit data. I chose these as they are the most basic building blocks of the Internet and make for easy reading and understanding.
+
 ```html
 <html>
   <head>
