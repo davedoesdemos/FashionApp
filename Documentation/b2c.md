@@ -75,6 +75,11 @@ See the following Microsoft documentation for more detailed explanations.
 </tr>
 <tr>
 <td width=
+<td width="60%">Click on Authentication, then tick the "Access Tokens (Used for implicit flows)" box.</td>
+<td width="40%"><img src="images/25accessTokens.png></td>
+</tr>
+<tr>
+<td width=
 <td width="60%">Back in the B2C tenant, complete the form and click save to complete registration. Note that "Name" here is what your users will see on the Microsoft login button so I suggest using "Microsoft Personal Account" or similar. Many documents suggest MSA, but this will confuse your users so use something more descriptive.</td>
 <td width="40%"><img src="images/17completeProviderSetup.png" /></td>
 </tr>
@@ -117,6 +122,11 @@ See the following Microsoft documentation for more detailed explanations.
 <td width=
 <td width="60%">Copy the client ID, which we will later add to the web app. Click Add a certificate or secret.</td>
 <td width="40%"><img src="images/23appID.png" /></td>
+</tr>
+<tr>
+<td width=
+<td width="60%">Click on Authentication, then tick the "Access Tokens (Used for implicit flows)" box.</td>
+<td width="40%"><img src="images/25accessTokens.png></td>
 </tr>
 <tr>
 <td width=
@@ -180,65 +190,36 @@ The bottom section includes the variable names we configured earlier to give acc
     }
   }
 ```
+For testing, I also created two files.
 
+index.html is just a landing page. It's not authenticated but has a link to page1.html which is authenticated.
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home | Fashion</title>
+  </head>
+  <body>
+    <a href="page1.html">page1</a>
+  </body>
+</html>
+```
 
-<table>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-<tr>
-<td width=
-<td width="60%"></td>
-<td width="40%"><img src="images" /></td>
-</tr>
-</table>
+page1.html is authenticated and just says "Welcome!" to confirm you logged in.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home | Fashion</title>
+  </head>
+  <body>
+    Welcome!
+  </body>
+</html>
+```
+
+Both of these can be removed once you're comfortable that the B2C is working.
 
 
