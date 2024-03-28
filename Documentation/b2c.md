@@ -221,5 +221,3 @@ page1.html is authenticated and just says "Welcome!" to confirm you logged in.
 ```
 
 Both of these can be removed once you're comfortable that the B2C is working.
-
-

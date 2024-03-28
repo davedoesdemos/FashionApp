@@ -123,8 +123,8 @@ The app uses Azure B2C for authentication. This allows us to use either Entra ID
 
 ## Build Documentation
 
-[Web App](Documentation/webapp.md)
+1. [Web App](Documentation/webapp.md)
 
-[Database](Documentation/database.md)
+2. [Azure B2C](Documentation/b2c.md)
 
-[Azure B2C](Documentation/b2c.md)
+3. [Database](Documentation/database.md)
