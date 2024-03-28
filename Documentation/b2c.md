@@ -119,7 +119,7 @@ See the following Microsoft documentation for more detailed explanations.
 <table>
 <tr>
 <td width="60%">In your main Azure tenant, open the static web app you created earlier and click on Environment Variables. Add two, and name them AADB2C_PROVIDER_CLIENT_ID and AADB2C_PROVIDER_CLIENT_SECRET. Copy in the clientID and Secret from the previous step in the B2C tenant. These will be used in the configuration file later on.</td>
-<td width="40%"><img src="images" /></td>
+<td width="40%"><img src="images/32environmentVariables.png" /></td>
 </tr>
 </table>
 
