@@ -126,7 +126,7 @@ See the following Microsoft documentation for more detailed explanations.
 <tr>
 <td width=
 <td width="60%">Click on Authentication, then tick the "Access Tokens (Used for implicit flows)" box.</td>
-<td width="40%"><img src="images/25accessTokens.png></td>
+<td width="40%"><img src="images/25accessTokens.png"></td>
 </tr>
 <tr>
 <td width=
